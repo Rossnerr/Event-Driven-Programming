@@ -45,10 +45,10 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam)
 	{
         case WM_CREATE:
             SetScrollRange(hwnd, SB_HORZ, 0, 4, TRUE);
-            SetScrollPos(hwnd, SB_HORZ, 3, TRUE);
+            SetScrollPos(hwnd, SB_HORZ, 0, TRUE);
 
             SetScrollRange(hwnd, SB_VERT, 0, 4, TRUE);
-            SetScrollPos(hwnd, SB_VERT, 3, TRUE);
+            SetScrollPos(hwnd, SB_VERT, 0, TRUE);
 
             hWndHorzColorScroll = CreateWindow("SCROLLBAR",
                                                NULL,
@@ -188,19 +188,6 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam)
                                              (HMENU) BUTTON_REMOVE,
                                              NULL,
                                              NULL);
-
-            hWndRemoveButton = CreateWindowEx(WS_EX_CLIENTEDGE,
-                                 "Button",
-                                 "Remove",
-                                 WS_VISIBLE | WS_CHILD | BS_DEFPUSHBUTTON,
-                                 800,
-                                 270,
-                                 100,
-                                 20,
-                                 hwnd,
-                                 (HMENU) BUTTON_REMOVE,
-                                 NULL,
-                                 NULL);
 
             RegisterHotKey(hwnd, HOTKEY_ALT_P, MOD_ALT, 'P');
             RegisterHotKey(hwnd, HOTKEY_CTRL_A, MOD_CONTROL, 'A');
