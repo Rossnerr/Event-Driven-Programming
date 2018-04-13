@@ -1,0 +1,34 @@
+#define IDC_STATIC -1
+
+#define IDR_MYMENU              10000
+#define IDM_DRAW_LINE           20001
+#define IDM_DRAW_SQUARE         20002
+#define IDM_DRAW_ELLIPSE        20003
+#define IDM_DRAW_PIE            20004
+#define IDM_DRAW_BEZIER_CURVE   20005
+#define IDM_DRAWM_LINE          20023
+#define IDM_DRAWM_RECTANGLE     20024
+#define IDM_DRAWM_ELLIPSE       20025
+#define IDM_DRAWM_BEZIER_CURVE  20026
+#define IDM_BRUSH_RED           20006
+#define IDM_BRUSH_GREEN         20007
+#define IDM_BRUSH_BLUE          20008
+#define IDM_BRUSH_DEFAULT       20009
+#define IDM_THIN_PEN_RED        20010
+#define IDM_THIN_PEN_GREEN      20011
+#define IDM_THIN_PEN_BLUE       20012
+#define IDM_THIN_PEN_BLACK      20013
+#define IDM_MEDIUM_PEN_RED      20014
+#define IDM_MEDIUM_PEN_GREEN    20015
+#define IDM_MEDIUM_PEN_BLUE     20016
+#define IDM_MEDIUM_PEN_BLACK    20017
+#define IDM_WIDE_PEN_RED        20018
+#define IDM_WIDE_PEN_GREEN      20019
+#define IDM_WIDE_PEN_BLUE       20020
+#define IDM_WIDE_PEN_BLACK      20021
+#define IDM_PEN_DEFAULT         20022
+#define IDM_ERASER_SMALL        20027
+#define IDM_ERASER_MEDIUM       20028
+#define IDM_ERASER_LARGE        20029
+
+#define ID_DELETE               30000

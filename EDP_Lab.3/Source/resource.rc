@@ -1,0 +1,80 @@
+#include "resource.h"
+#include "afxres.h"
+IDR_MYMENU MENU DISCARDABLE
+BEGIN
+    POPUP "&Draw"
+    BEGIN
+        MENUITEM "&Line",                IDM_DRAW_LINE
+        MENUITEM "&Square",              IDM_DRAW_SQUARE
+        MENUITEM "&Ellipse",             IDM_DRAW_ELLIPSE
+        MENUITEM "&Pie",                 IDM_DRAW_PIE
+        MENUITEM "&Bezier Curve",        IDM_DRAW_BEZIER_CURVE
+    END
+    POPUP "&Brush"
+    BEGIN
+        MENUITEM "&Red",                IDM_BRUSH_RED
+        MENUITEM "&Green",              IDM_BRUSH_GREEN
+        MENUITEM "&Blue",               IDM_BRUSH_BLUE
+        MENUITEM SEPARATOR
+        MENUITEM "&Default",            IDM_BRUSH_DEFAULT
+    END
+    POPUP "&Pen"
+    BEGIN
+        POPUP "&Thin"
+        BEGIN
+            MENUITEM "&Red",                IDM_THIN_PEN_RED
+            MENUITEM "&Green",              IDM_THIN_PEN_GREEN
+            MENUITEM "&Blue",               IDM_THIN_PEN_BLUE
+            MENUITEM SEPARATOR
+            MENUITEM "&Black",              IDM_THIN_PEN_BLACK
+        END
+        POPUP "&Medium"
+        BEGIN
+            MENUITEM "&Red",                IDM_MEDIUM_PEN_RED
+            MENUITEM "&Green",              IDM_MEDIUM_PEN_GREEN
+            MENUITEM "&Blue",               IDM_MEDIUM_PEN_BLUE
+            MENUITEM SEPARATOR
+            MENUITEM "&Black",              IDM_MEDIUM_PEN_BLACK
+        END
+        POPUP "&Thick"
+        BEGIN
+            MENUITEM "&Red",                IDM_WIDE_PEN_RED
+            MENUITEM "&Green",              IDM_WIDE_PEN_GREEN
+            MENUITEM "&Blue",               IDM_WIDE_PEN_BLUE
+            MENUITEM SEPARATOR
+            MENUITEM "&Black",              IDM_WIDE_PEN_BLACK
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Default",                IDM_PEN_DEFAULT
+    END
+    POPUP "&Draw with Mouse"
+    BEGIN
+        MENUITEM "&Line",                   IDM_DRAWM_LINE
+        MENUITEM "&Rectangle",              IDM_DRAWM_RECTANGLE
+        MENUITEM "&Ellipse",                IDM_DRAWM_ELLIPSE
+        MENUITEM "&Bezier Curve",           IDM_DRAWM_BEZIER_CURVE
+    END
+    POPUP "&Eraser"
+    BEGIN
+        MENUITEM "&Small",              IDM_ERASER_SMALL
+        MENUITEM "&Medium",             IDM_ERASER_MEDIUM
+        MENUITEM "&Large",              IDM_ERASER_LARGE
+    END
+END
+
+// Dialog
+IDD_MYDIALOGBOX DIALOG DISCARDABLE 16, 16, 120, 141
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Color Scroll Scrollbars"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT "&Red",IDC_STATIC,8,8,24,8,NOT WS_GROUP
+    SCROLLBAR 10,8,20,24,100,SBS_VERT | WS_TABSTOP
+    CTEXT "0",13,8,124,24,8,NOT WS_GROUP
+    CTEXT "&Green",IDC_STATIC,48,8,24,8,NOT WS_GROUP
+    SCROLLBAR 11,48,20,24,100,SBS_VERT | WS_TABSTOP
+    CTEXT "0",14,48,124,24,8,NOT WS_GROUP
+    CTEXT "&Blue",IDC_STATIC,89,8,24,8,NOT WS_GROUP
+    SCROLLBAR 12,89,20,24,100,SBS_VERT | WS_TABSTOP
+    CTEXT "0",15,89,124,24,8,NOT WS_GROUP
+END
